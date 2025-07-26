@@ -161,7 +161,7 @@ sudo nmcli dev wifi connect <Wi-Fi_name> password "<password>"
 ping google.com
 ```
 
-### Cài GNOME:
+### Cài HYPRLAND:
 ```bash
 sudo pacman -S xorg xdg-desktop-portal xdg-desktop-portal-hyprland hyprland hyprpaper wofi thunar network-manager-applet pulseaudio pulseaudio-alsa
 sudo systemctl enable gdm
