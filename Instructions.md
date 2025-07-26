@@ -77,7 +77,7 @@ lsblk
 ## IV. Cài đặt hệ thống cơ sở Arch Linux
 
 ```bash
-pacstrap -K /mnt base base-devel linux linux-headers firmware intel-ucode sudo nano git vim fastfetch networkmanager grub efibootmgr pipewire
+pacstrap -K /mnt base base-devel linux linux-firmware sudo nano git fastfetch networkmanager grub efibootmgr os-prober mtools dosfstools
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
@@ -143,7 +143,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ## VIII. Các bước cuối cùng trong môi trường chroot
 
 ```bash
-systemctl enable bluetooth.service
 systemctl enable NetworkManager
 exit
 umount -R /mnt
@@ -164,7 +163,7 @@ ping google.com
 
 ### Cài GNOME:
 ```bash
-sudo pacman -S gnome gnome-extra gnome-tweaks gnome-shell-extensions nautilus-open-terminal network-manager-applet noto-fonts-emoji eog evince file-roller gnome-calculator gnome-disk-utility gnome-screenshot gnome-system-monitor gnome-terminal gnome-text-editor gnome-weather gvfs htop libreoffice-still networkmanager-openvpn simple-scan unrar unzip xdg-user-dirs-gtk zip
+sudo pacman -S xorg xdg-desktop-portal xdg-desktop-portal-hyprland hyprland hyprpaper wofi thunar network-manager-applet pulseaudio pulseaudio-alsa
 sudo systemctl enable gdm
 reboot
 ```
